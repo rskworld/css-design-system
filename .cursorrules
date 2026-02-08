@@ -1,0 +1,12 @@
+# Project rules – RSK World CSS Design System
+
+## Author and attribution
+- **Never** use "cursoragent", "Cursor Agent", or any AI/agent/tool name as author, committer, or in any project content (commits, comments, docs, meta tags).
+- **Always** use the project owner only: **Molla Samser**, **RSK World** (https://rskworld.in).
+- For **git**: use author `Molla Samser <help@rskworld.in>`. Commit messages must not contain "cursoragent" or "rskworld" as author/agent names; keep messages neutral (e.g. "Initial release: Responsive Design System v1.0.0").
+
+## Contact (for attribution in files)
+- Founder: Molla Samser
+- Email: help@rskworld.in | support@rskworld.in
+- Phone: +91 93305 39277
+- Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
