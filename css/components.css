@@ -1,0 +1,284 @@
+/*
+ * Component Library - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+/* ----- Buttons ----- */
+.rsk-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--rsk-space-2);
+  padding: var(--rsk-space-2) var(--rsk-space-4);
+  font-family: var(--rsk-font-sans);
+  font-size: var(--rsk-text-base);
+  font-weight: var(--rsk-font-medium);
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: var(--rsk-radius-lg);
+  transition: color var(--rsk-duration-fast) var(--rsk-ease-default),
+    background-color var(--rsk-duration-fast) var(--rsk-ease-default),
+    border-color var(--rsk-duration-fast) var(--rsk-ease-default),
+    box-shadow var(--rsk-duration-fast) var(--rsk-ease-default);
+}
+
+.rsk-btn:focus-visible {
+  outline: 2px solid var(--rsk-color-primary);
+  outline-offset: 2px;
+}
+
+.rsk-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.rsk-btn-primary {
+  color: var(--rsk-color-primary-contrast);
+  background-color: var(--rsk-color-primary);
+  border-color: var(--rsk-color-primary);
+}
+
+.rsk-btn-primary:hover:not(:disabled) {
+  background-color: var(--rsk-color-primary-dark);
+  border-color: var(--rsk-color-primary-dark);
+}
+
+.rsk-btn-secondary {
+  color: var(--rsk-color-gray-800);
+  background-color: var(--rsk-color-gray-200);
+  border-color: var(--rsk-color-gray-300);
+}
+
+.rsk-btn-secondary:hover:not(:disabled) {
+  background-color: var(--rsk-color-gray-300);
+  border-color: var(--rsk-color-gray-400);
+}
+
+.rsk-btn-outline-primary {
+  color: var(--rsk-color-primary);
+  background-color: transparent;
+  border-color: var(--rsk-color-primary);
+}
+
+.rsk-btn-outline-primary:hover:not(:disabled) {
+  color: var(--rsk-color-primary-contrast);
+  background-color: var(--rsk-color-primary);
+}
+
+.rsk-btn-sm {
+  padding: var(--rsk-space-1) var(--rsk-space-3);
+  font-size: var(--rsk-text-sm);
+  border-radius: var(--rsk-radius-md);
+}
+
+.rsk-btn-lg {
+  padding: var(--rsk-space-3) var(--rsk-space-6);
+  font-size: var(--rsk-text-lg);
+  border-radius: var(--rsk-radius-xl);
+}
+
+/* ----- Cards ----- */
+.rsk-card {
+  background-color: var(--rsk-color-white);
+  border: 1px solid var(--rsk-color-gray-200);
+  border-radius: var(--rsk-radius-xl);
+  box-shadow: var(--rsk-shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--rsk-duration-normal) var(--rsk-ease-default);
+}
+
+.rsk-card:hover {
+  box-shadow: var(--rsk-shadow-md);
+}
+
+.rsk-card-header {
+  padding: var(--rsk-space-4);
+  border-bottom: 1px solid var(--rsk-color-gray-200);
+  font-weight: var(--rsk-font-semibold);
+  font-size: var(--rsk-text-lg);
+}
+
+.rsk-card-body {
+  padding: var(--rsk-space-4);
+}
+
+.rsk-card-footer {
+  padding: var(--rsk-space-3) var(--rsk-space-4);
+  border-top: 1px solid var(--rsk-color-gray-200);
+  background-color: var(--rsk-color-gray-50);
+}
+
+/* ----- Badges ----- */
+.rsk-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--rsk-space-1) var(--rsk-space-2);
+  font-size: var(--rsk-text-xs);
+  font-weight: var(--rsk-font-medium);
+  line-height: 1;
+  border-radius: var(--rsk-radius-full);
+}
+
+.rsk-badge-primary {
+  color: var(--rsk-color-primary-contrast);
+  background-color: var(--rsk-color-primary);
+}
+
+.rsk-badge-success {
+  color: #fff;
+  background-color: var(--rsk-color-success);
+}
+
+.rsk-badge-warning {
+  color: var(--rsk-color-gray-900);
+  background-color: var(--rsk-color-warning);
+}
+
+.rsk-badge-danger {
+  color: #fff;
+  background-color: var(--rsk-color-danger);
+}
+
+.rsk-badge-info {
+  color: #fff;
+  background-color: var(--rsk-color-info);
+}
+
+/* ----- Alerts ----- */
+.rsk-alert {
+  padding: var(--rsk-space-4);
+  border: 1px solid transparent;
+  border-radius: var(--rsk-radius-lg);
+  margin-bottom: var(--rsk-space-4);
+}
+
+.rsk-alert-primary {
+  color: #084298;
+  background-color: #cfe2ff;
+  border-color: #b6d4fe;
+}
+
+.rsk-alert-success {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+
+.rsk-alert-warning {
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+}
+
+.rsk-alert-danger {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+
+/* ----- Form inputs ----- */
+.rsk-input,
+.rsk-select,
+.rsk-textarea {
+  display: block;
+  width: 100%;
+  padding: var(--rsk-space-2) var(--rsk-space-3);
+  font-family: var(--rsk-font-sans);
+  font-size: var(--rsk-text-base);
+  line-height: 1.5;
+  color: var(--rsk-color-gray-800);
+  background-color: var(--rsk-color-white);
+  border: 1px solid var(--rsk-color-gray-300);
+  border-radius: var(--rsk-radius-lg);
+  transition: border-color var(--rsk-duration-fast), box-shadow var(--rsk-duration-fast);
+}
+
+.rsk-input:focus,
+.rsk-select:focus,
+.rsk-textarea:focus {
+  border-color: var(--rsk-color-primary);
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
+}
+
+.rsk-input::placeholder,
+.rsk-textarea::placeholder {
+  color: var(--rsk-color-gray-500);
+}
+
+.rsk-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.rsk-label {
+  display: inline-block;
+  margin-bottom: var(--rsk-space-1);
+  font-size: var(--rsk-text-sm);
+  font-weight: var(--rsk-font-medium);
+  color: var(--rsk-color-gray-700);
+}
+
+/* ----- Nav ----- */
+.rsk-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rsk-space-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rsk-nav-link {
+  display: block;
+  padding: var(--rsk-space-2) var(--rsk-space-3);
+  color: var(--rsk-color-gray-600);
+  text-decoration: none;
+  border-radius: var(--rsk-radius-md);
+  transition: color var(--rsk-duration-fast), background-color var(--rsk-duration-fast);
+}
+
+.rsk-nav-link:hover {
+  color: var(--rsk-color-primary);
+  background-color: var(--rsk-color-gray-100);
+}
+
+.rsk-nav-link.active {
+  color: var(--rsk-color-primary);
+  font-weight: var(--rsk-font-medium);
+  background-color: rgba(74, 144, 226, 0.1);
+}
+
+/* ----- List group ----- */
+.rsk-list-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--rsk-color-gray-200);
+  border-radius: var(--rsk-radius-lg);
+  overflow: hidden;
+}
+
+.rsk-list-group-item {
+  padding: var(--rsk-space-3) var(--rsk-space-4);
+  border-bottom: 1px solid var(--rsk-color-gray-200);
+  background-color: var(--rsk-color-white);
+}
+
+.rsk-list-group-item:last-child {
+  border-bottom: 0;
+}
+
+.rsk-list-group-item:hover {
+  background-color: var(--rsk-color-gray-50);
+}

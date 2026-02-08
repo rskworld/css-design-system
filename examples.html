@@ -1,0 +1,244 @@
+<!--
+  Examples - Typography, Forms, Tables, Layout, Effects
+  © 2026 RSK World | https://rskworld.in
+  Founder: Molla Samser
+  Email: help@rskworld.in | support@rskworld.in
+  Phone: +91 93305 39277
+  Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Molla Samser - RSK World - https://rskworld.in">
+  <meta name="description" content="Examples: typography, forms, tables, layout, effects. RSK World Design System.">
+  <title>Examples | Responsive Design System | RSK World</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <style>
+    body { font-family: var(--rsk-font-sans); color: var(--rsk-text, var(--rsk-color-gray-800)); line-height: 1.6; background: var(--rsk-surface); }
+    .footer-credit { font-size: var(--rsk-text-sm); color: var(--rsk-text-muted); }
+    .footer-credit a { color: var(--rsk-color-primary); }
+  </style>
+</head>
+<body>
+  <a href="#main" class="rsk-skip-link">Skip to main content</a>
+  <header class="rsk-card rsk-mb-4" style="border-radius: 0; border-left: 0; border-right: 0;">
+    <div class="rsk-container">
+      <div class="rsk-row" style="--rsk-gutter-x: 1rem;">
+        <div class="rsk-col rsk-col-12 rsk-d-flex rsk-justify-between rsk-items-center rsk-py-3">
+          <h1 class="rsk-text-xl rsk-font-bold rsk-m-0">Examples</h1>
+          <nav aria-label="Main">
+            <ul class="rsk-nav">
+              <li><a class="rsk-nav-link" href="index.html">Home</a></li>
+              <li><a class="rsk-nav-link" href="components.html">Components</a></li>
+              <li><a class="rsk-nav-link" href="examples.html" class="active">Examples</a></li>
+              <li><a class="rsk-nav-link" href="documentation.html">Documentation</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="rsk-container">
+    <!-- Typography -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Typography</h2>
+      <div class="rsk-stack-4">
+        <h1 class="rsk-h1">Heading 1</h1>
+        <h2 class="rsk-h2">Heading 2</h2>
+        <h3 class="rsk-h3">Heading 3</h3>
+        <p class="rsk-lead">Lead paragraph. Design system by RSK World – rskworld.in.</p>
+        <blockquote class="rsk-blockquote">
+          A quote or callout. Founder: Molla Samser.
+          <footer class="rsk-blockquote-footer">— RSK World</footer>
+        </blockquote>
+        <p>Inline <code class="rsk-code">code</code> and <kbd class="rsk-kbd">Esc</kbd> key.</p>
+      </div>
+    </section>
+
+    <!-- Forms advanced -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Forms (checkbox, radio, switch)</h2>
+      <div class="rsk-card rsk-p-4" style="max-width: 20rem;">
+        <div class="rsk-form-group">
+          <label class="rsk-form-check">
+            <input type="checkbox" class="rsk-form-check-input" name="c1">
+            <span class="rsk-form-check-label">Checkbox option</span>
+          </label>
+        </div>
+        <div class="rsk-form-group">
+          <label class="rsk-form-check">
+            <input type="radio" class="rsk-form-check-input" name="r1">
+            <span class="rsk-form-check-label">Radio one</span>
+          </label>
+          <label class="rsk-form-check">
+            <input type="radio" class="rsk-form-check-input" name="r1">
+            <span class="rsk-form-check-label">Radio two</span>
+          </label>
+        </div>
+        <label class="rsk-switch">
+          <input type="checkbox" class="rsk-switch-input">
+          <span class="rsk-switch-track"><span class="rsk-switch-thumb"></span></span>
+          <span class="rsk-switch-label">Toggle switch</span>
+        </label>
+        <div class="rsk-form-group rsk-mt-3">
+          <div class="rsk-input-group">
+            <span class="rsk-input-group-addon">https://</span>
+            <input type="text" class="rsk-input" placeholder="rskworld.in">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tables -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Tables</h2>
+      <div class="rsk-table-responsive">
+        <table class="rsk-table rsk-table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th class="rsk-text-right">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>RSK World</td><td>Design System</td><td class="rsk-text-right"><span class="rsk-badge rsk-badge-success">Active</span></td></tr>
+            <tr><td>Molla Samser</td><td>Founder</td><td class="rsk-text-right"><span class="rsk-badge rsk-badge-primary">OK</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Layout (stack, cluster, split) -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Layout</h2>
+      <div class="rsk-split rsk-mb-3">
+        <div class="rsk-card rsk-p-4"><strong>Split left</strong> – flex 1</div>
+        <div class="rsk-card rsk-p-4"><strong>Split right</strong> – flex 1</div>
+      </div>
+      <div class="rsk-cluster rsk-mb-3">
+        <span class="rsk-badge rsk-badge-primary">Cluster</span>
+        <span class="rsk-badge rsk-badge-success">items</span>
+        <button type="button" class="rsk-btn rsk-btn-sm rsk-btn-outline-primary">Button</button>
+      </div>
+      <p class="rsk-center rsk-center-text rsk-small">Centered text (max-width 65ch). RSK World.</p>
+    </section>
+
+    <!-- Effects: progress, avatar, divider, spinner, empty state -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Effects</h2>
+      <div class="rsk-stack-4">
+        <div>
+          <p class="rsk-small rsk-mb-1">Progress</p>
+          <div class="rsk-progress rsk-mb-2">
+            <div class="rsk-progress-bar" style="width: 65%;"></div>
+          </div>
+          <div class="rsk-progress rsk-progress-lg">
+            <div class="rsk-progress-bar rsk-progress-bar-success" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="rsk-cluster">
+          <span class="rsk-avatar">RS</span>
+          <span class="rsk-avatar rsk-avatar-sm">M</span>
+          <span class="rsk-avatar rsk-avatar-lg">S</span>
+          <div class="rsk-avatar-group">
+            <span class="rsk-avatar rsk-avatar-sm">1</span>
+            <span class="rsk-avatar rsk-avatar-sm">2</span>
+            <span class="rsk-avatar rsk-avatar-sm">3</span>
+          </div>
+        </div>
+        <div class="rsk-divider-text">Divider with text</div>
+        <div class="rsk-cluster">
+          <span class="rsk-spinner" aria-hidden="true"></span>
+          <span class="rsk-spinner rsk-spinner-sm" aria-hidden="true"></span>
+        </div>
+        <div class="rsk-card">
+          <div class="rsk-empty-state">
+            <div class="rsk-empty-state-icon" aria-hidden="true">📁</div>
+            <h3 class="rsk-empty-state-title">No items yet</h3>
+            <p class="rsk-empty-state-text">Add content or check back later. By rskworld.in.</p>
+            <button type="button" class="rsk-btn rsk-btn-primary">Add item</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advanced: Callouts, Scroll-snap, Timeline, Overlays -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Advanced</h2>
+
+      <h3 class="rsk-h4 rsk-mb-2">Callouts</h3>
+      <div class="rsk-stack-3 rsk-mb-4">
+        <div class="rsk-callout rsk-callout-info">
+          <span class="rsk-callout-icon" aria-hidden="true">ℹ</span>
+          <div class="rsk-callout-content">
+            <div class="rsk-callout-title">Info</div>
+            <p>Design system by RSK World. help@rskworld.in</p>
+          </div>
+        </div>
+        <div class="rsk-callout rsk-callout-success">
+          <span class="rsk-callout-icon" aria-hidden="true">✓</span>
+          <div class="rsk-callout-content">
+            <div class="rsk-callout-title">Tip</div>
+            <p>Use callouts for notes, tips, and warnings.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="rsk-h4 rsk-mb-2">Scroll-snap (horizontal)</h3>
+      <div class="rsk-scroll-snap-x rsk-scrollbar-thin rsk-mb-4" style="max-width: 100%;">
+        <div class="rsk-card" style="width: 16rem;"><div class="rsk-card-body">Snap 1</div></div>
+        <div class="rsk-card" style="width: 16rem;"><div class="rsk-card-body">Snap 2</div></div>
+        <div class="rsk-card" style="width: 16rem;"><div class="rsk-card-body">Snap 3</div></div>
+      </div>
+
+      <h3 class="rsk-h4 rsk-mb-2">Timeline</h3>
+      <div class="rsk-timeline rsk-mb-4">
+        <div class="rsk-timeline-item">
+          <div class="rsk-timeline-time">Step 1</div>
+          <div class="rsk-timeline-title">Start</div>
+          <p class="rsk-timeline-content">Begin with design tokens. RSK World.</p>
+        </div>
+        <div class="rsk-timeline-item rsk-timeline-item-success">
+          <div class="rsk-timeline-time">Step 2</div>
+          <div class="rsk-timeline-title">Build</div>
+          <p class="rsk-timeline-content">Add components and utilities.</p>
+        </div>
+        <div class="rsk-timeline-item">
+          <div class="rsk-timeline-time">Step 3</div>
+          <div class="rsk-timeline-title">Ship</div>
+          <p class="rsk-timeline-content">Document and share. rskworld.in</p>
+        </div>
+      </div>
+
+      <h3 class="rsk-h4 rsk-mb-2">Stepper (horizontal steps)</h3>
+      <div class="rsk-steps rsk-mb-4">
+        <div class="rsk-step is-done"><span class="rsk-step-number">1</span><span class="rsk-step-label">Done</span></div>
+        <div class="rsk-step is-active"><span class="rsk-step-number">2</span><span class="rsk-step-label">Active</span></div>
+        <div class="rsk-step"><span class="rsk-step-number">3</span><span class="rsk-step-label">Next</span></div>
+      </div>
+
+      <h3 class="rsk-h4 rsk-mb-2">Card overlay</h3>
+      <div class="rsk-card-overlay rsk-mb-4" style="max-width: 20rem;">
+        <img class="rsk-card-overlay-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225' viewBox='0 0 400 225'%3E%3Crect fill='%234a90e2' width='400' height='225'/%3E%3Ctext fill='%23fff' x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" alt="">
+        <div class="rsk-card-overlay-caption">
+          <div class="rsk-card-overlay-title">Overlay title</div>
+          <p class="rsk-card-overlay-text">Caption on image. By rskworld.in</p>
+        </div>
+      </div>
+
+      <h3 class="rsk-h4 rsk-mb-2">Sticky &amp; z-index</h3>
+      <p class="rsk-small rsk-mb-2">Utilities: <code class="rsk-code">.rsk-sticky-top</code>, <code class="rsk-code">.rsk-sticky-bottom</code>, <code class="rsk-code">.rsk-z-dropdown</code>, <code class="rsk-code">.rsk-z-modal</code>. Selection uses primary color. Try selecting this text.</p>
+    </section>
+  </main>
+
+  <footer class="rsk-container rsk-pt-4 rsk-pb-4 rsk-border" style="border-left: 0; border-right: 0; border-bottom: 0;">
+    <p class="rsk-text-center footer-credit rsk-m-0">
+      Examples © 2026 <a href="https://rskworld.in">RSK World</a>. Molla Samser. help@rskworld.in | +91 93305 39277.
+    </p>
+  </footer>
+</body>
+</html>

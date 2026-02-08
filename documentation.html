@@ -1,0 +1,168 @@
+<!--
+  Documentation - Responsive Design System
+  © 2026 RSK World | https://rskworld.in
+  Founder: Molla Samser
+  Email: help@rskworld.in | support@rskworld.in
+  Phone: +91 93305 39277
+  Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Molla Samser - RSK World - https://rskworld.in">
+  <meta name="description" content="Documentation for Responsive Design System - components, tokens, grid, utilities. RSK World.">
+  <title>Documentation | Responsive Design System | RSK World</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <style>
+    body { font-family: var(--rsk-font-sans); color: var(--rsk-color-gray-800); line-height: 1.6; }
+    code { font-family: var(--rsk-font-mono); font-size: var(--rsk-text-sm); background: var(--rsk-color-gray-100); padding: 0.125rem 0.375rem; border-radius: var(--rsk-radius-sm); }
+    pre { background: var(--rsk-color-gray-900); color: var(--rsk-color-gray-100); padding: var(--rsk-space-4); border-radius: var(--rsk-radius-lg); overflow-x: auto; }
+    pre code { background: none; padding: 0; color: inherit; }
+    .doc-section { margin-bottom: var(--rsk-space-8); }
+    .footer-credit { font-size: var(--rsk-text-sm); color: var(--rsk-color-gray-600); }
+    .footer-credit a { color: var(--rsk-color-primary); }
+  </style>
+</head>
+<body>
+  <header class="rsk-card rsk-mb-4" style="border-radius: 0; border-left: 0; border-right: 0;">
+    <div class="rsk-container">
+      <div class="rsk-row" style="--rsk-gutter-x: 1rem;">
+        <div class="rsk-col rsk-col-12 rsk-d-flex rsk-justify-between rsk-items-center rsk-py-3">
+          <h1 class="rsk-text-xl rsk-font-bold rsk-m-0">Documentation</h1>
+          <nav>
+            <ul class="rsk-nav">
+              <li><a class="rsk-nav-link" href="index.html">Home</a></li>
+              <li><a class="rsk-nav-link" href="components.html">Components</a></li>
+              <li><a class="rsk-nav-link" href="examples.html">Examples</a></li>
+              <li><a class="rsk-nav-link active" href="documentation.html">Documentation</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="rsk-container">
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Design Tokens</h2>
+      <p>CSS custom properties in <code>css/tokens.css</code>. Colors, typography, spacing, radius, shadows, breakpoints.</p>
+      <pre><code>/* Example usage */
+color: var(--rsk-color-primary);
+font-size: var(--rsk-text-lg);
+padding: var(--rsk-space-4);
+border-radius: var(--rsk-radius-lg);
+box-shadow: var(--rsk-shadow-md);</code></pre>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Typography</h2>
+      <p><code>css/typography.css</code>. Headings <code>.rsk-h1</code>–<code>.rsk-h6</code>, <code>.rsk-lead</code>, <code>.rsk-blockquote</code>, <code>.rsk-code</code>, <code>.rsk-pre</code>, <code>.rsk-kbd</code>, lists (unstyled, inline, styled), <code>.rsk-dl-inline</code>. See <a href="examples.html">examples.html</a>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Layout</h2>
+      <p><code>css/layout.css</code>. Stack <code>.rsk-stack-1</code>–<code>.rsk-stack-6</code>, cluster <code>.rsk-cluster</code>, sidebar <code>.rsk-with-sidebar</code>, split <code>.rsk-split</code>, center <code>.rsk-center</code>, flow <code>.rsk-flow</code>, region <code>.rsk-region</code>, wrapper <code>.rsk-wrapper</code>, box <code>.rsk-box</code>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Forms advanced</h2>
+      <p><code>css/forms-advanced.css</code>. Form group <code>.rsk-form-group</code>, hint/error, checkbox/radio <code>.rsk-form-check</code>, switch <code>.rsk-switch</code> (track + thumb), input group <code>.rsk-input-group</code> + addon, validation <code>.is-valid</code> / <code>.is-invalid</code>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Tables</h2>
+      <p><code>css/tables.css</code>. <code>.rsk-table</code>, <code>.rsk-table-striped</code>, <code>.rsk-table-bordered</code>, <code>.rsk-table-compact</code>, <code>.rsk-table-responsive</code> (scroll wrapper).</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Effects</h2>
+      <p><code>css/effects.css</code>. Progress <code>.rsk-progress</code> + <code>.rsk-progress-bar</code>, avatar <code>.rsk-avatar</code> (sm/lg/xl), <code>.rsk-avatar-group</code>, divider <code>.rsk-divider</code> / <code>.rsk-divider-text</code>, spinner <code>.rsk-spinner</code>, empty state <code>.rsk-empty-state</code>, <code>.rsk-card-img-top</code>, blur <code>.rsk-blur</code>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Callouts</h2>
+      <p><code>css/callouts.css</code>. Highlight boxes: <code>.rsk-callout</code> with <code>.rsk-callout-info</code>, <code>.rsk-callout-success</code>, <code>.rsk-callout-warning</code>, <code>.rsk-callout-danger</code>. Optional <code>.rsk-callout-icon</code>, <code>.rsk-callout-title</code>, <code>.rsk-callout-content</code>. Dark theme supported.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Scroll</h2>
+      <p><code>css/scroll.css</code>. Scroll-snap: <code>.rsk-scroll-snap-x</code> (horizontal carousel), <code>.rsk-scroll-snap-y</code> (vertical sections). <code>.rsk-scroll-margin-header</code> for anchor offset. Scrollbar: <code>.rsk-scrollbar-thin</code>, <code>.rsk-scrollbar-hide</code>. <code>.rsk-scroll-smooth</code> (respects reduced motion).</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Timeline & Steps</h2>
+      <p><code>css/timeline.css</code>. Vertical timeline: <code>.rsk-timeline</code>, <code>.rsk-timeline-item</code> (optional <code>.rsk-timeline-item-success</code> / <code>-warning</code> / <code>-danger</code>), <code>.rsk-timeline-time</code>, <code>.rsk-timeline-title</code>, <code>.rsk-timeline-content</code>. Horizontal stepper: <code>.rsk-steps</code>, <code>.rsk-step</code> with <code>.is-active</code> / <code>.is-done</code>, <code>.rsk-step-number</code>, <code>.rsk-step-label</code>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Overlays</h2>
+      <p><code>css/overlays.css</code>. Card overlay: <code>.rsk-card-overlay</code>, <code>.rsk-card-overlay-img</code>, <code>.rsk-card-overlay-caption</code>. Hero: <code>.rsk-hero-overlay</code>, <code>.rsk-hero-overlay-content</code>. Backdrop: <code>.rsk-overlay-backdrop</code>. Media caption: <code>.rsk-media-overlay</code>, <code>.rsk-media-overlay-caption</code>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Selection & Sticky</h2>
+      <p><code>css/selection.css</code>. Custom <code>::selection</code> (primary tint). Sticky: <code>.rsk-sticky-top</code>, <code>.rsk-sticky-bottom</code>, <code>.rsk-sticky-top-2</code>, <code>.rsk-sticky-top-4</code>. Z-index: <code>.rsk-z-0</code>–<code>.rsk-z-50</code>, <code>.rsk-z-dropdown</code>, <code>.rsk-z-modal</code>, <code>.rsk-z-tooltip</code>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Grid System</h2>
+      <p>12-column flexbox grid. Use <code>.rsk-container</code>, <code>.rsk-row</code>, and <code>.rsk-col-*</code> / <code>.rsk-col-{sm|md|lg}-*</code>.</p>
+      <pre><code>&lt;div class="rsk-container"&gt;
+  &lt;div class="rsk-row"&gt;
+    &lt;div class="rsk-col rsk-col-12 rsk-col-md-6"&gt;Column&lt;/div&gt;
+    &lt;div class="rsk-col rsk-col-12 rsk-col-md-6"&gt;Column&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Utility Classes</h2>
+      <p>Display, flex, spacing, text, width, visibility, border, shadow. Prefix: <code>rsk-</code>.</p>
+      <p>Examples: <code>.rsk-d-flex</code>, <code>.rsk-justify-center</code>, <code>.rsk-m-4</code>, <code>.rsk-p-3</code>, <code>.rsk-text-center</code>, <code>.rsk-font-bold</code>, <code>.rsk-rounded</code>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Components</h2>
+      <p>Buttons (<code>.rsk-btn</code>, <code>.rsk-btn-primary</code>, <code>.rsk-btn-outline-primary</code>), cards (<code>.rsk-card</code>, <code>.rsk-card-header</code>, <code>.rsk-card-body</code>, <code>.rsk-card-footer</code>), badges (<code>.rsk-badge</code>), alerts (<code>.rsk-alert</code>), form inputs (<code>.rsk-input</code>, <code>.rsk-select</code>, <code>.rsk-textarea</code>, <code>.rsk-label</code>), nav (<code>.rsk-nav</code>, <code>.rsk-nav-link</code>), list group (<code>.rsk-list-group</code>, <code>.rsk-list-group-item</code>).</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Themes</h2>
+      <p><code>css/themes.css</code>. Light/dark via <code>data-theme="light"</code> or <code>data-theme="dark"</code>. Semantic tokens: <code>--rsk-surface</code>, <code>--rsk-text</code>, <code>--rsk-border</code>. Respects <code>prefers-color-scheme: dark</code> when no theme set.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Animations</h2>
+      <p><code>css/animations.css</code>. Keyframes: fade-in, slide-up, scale-in, spin, pulse, bounce, shimmer. Classes: <code>.rsk-animate-fade-in</code>, <code>.rsk-animate-pulse</code>, <code>.rsk-transition</code>, <code>.rsk-skeleton</code>. Respects <code>prefers-reduced-motion</code>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Advanced Components</h2>
+      <p><code>css/components-advanced.css</code>. Modal (backdrop + <code>.rsk-modal</code>), Tabs (<code>.rsk-tabs</code>, <code>.rsk-tabs-trigger</code>, <code>.rsk-tabs-panel</code>), Dropdown (<code>.rsk-dropdown</code>, <code>.rsk-dropdown-menu</code>), Tooltip (<code>.rsk-tooltip</code>, <code>.rsk-tooltip-content</code>), Breadcrumb, Pagination, Accordion. See <a href="components.html">components.html</a> for demos.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Focus & Print</h2>
+      <p><code>css/focus.css</code> – <code>:focus-visible</code> ring on interactive elements, <code>.rsk-skip-link</code>. <code>css/print.css</code> – print media query: hide modals/dropdowns, show link URLs, avoid breaks inside cards.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Responsive Patterns</h2>
+      <p><code>.rsk-show-sm</code> / <code>.rsk-hide-sm</code> (and md, lg), <code>.rsk-responsive-text</code>, <code>.rsk-responsive-heading</code>, <code>.rsk-responsive-grid</code>, <code>.rsk-stack</code> / <code>.rsk-stack-row</code>, <code>.rsk-img-fluid</code>, aspect ratios. Respects <code>prefers-reduced-motion</code>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Credits</h2>
+      <p>Responsive Design System © 2026 RSK World. Founder: Molla Samser. Website: <a href="https://rskworld.in">rskworld.in</a>. Email: help@rskworld.in, support@rskworld.in. Phone: +91 93305 39277. Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147.</p>
+    </div>
+  </main>
+
+  <footer class="rsk-container rsk-pt-4 rsk-pb-4 rsk-border" style="border-left: 0; border-right: 0; border-bottom: 0;">
+    <p class="rsk-text-center footer-credit rsk-m-0">
+      Documentation © 2026 <a href="https://rskworld.in">RSK World</a>. Molla Samser. help@rskworld.in | +91 93305 39277.
+    </p>
+  </footer>
+</body>
+</html>

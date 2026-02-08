@@ -1,0 +1,141 @@
+<!--
+  Responsive Design System - Demo & Documentation Home
+  © 2026 RSK World | https://rskworld.in
+  Founder: Molla Samser
+  Email: help@rskworld.in | support@rskworld.in
+  Phone: +91 93305 39277
+  Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Molla Samser - RSK World - https://rskworld.in">
+  <meta name="description" content="Complete CSS framework with components and utilities. By RSK World - rskworld.in">
+  <title>Responsive Design System | CSS Framework | RSK World</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <style>
+    /* Page-specific overrides - RSK World © 2026 */
+    body { font-family: var(--rsk-font-sans); color: var(--rsk-color-gray-800); line-height: 1.6; }
+    .hero { background: linear-gradient(135deg, var(--rsk-color-primary) 0%, var(--rsk-color-primary-dark) 100%); color: #fff; }
+    .footer-credit { font-size: var(--rsk-text-sm); color: var(--rsk-color-gray-600); }
+    .footer-credit a { color: var(--rsk-color-primary); }
+  </style>
+</head>
+<body>
+  <!-- Header - RSK World Design System -->
+  <header class="rsk-card rsk-mb-4" style="border-radius: 0; border-left: 0; border-right: 0;">
+    <div class="rsk-container">
+      <div class="rsk-row" style="--rsk-gutter-x: 1rem;">
+        <div class="rsk-col rsk-col-12 rsk-d-flex rsk-justify-between rsk-items-center rsk-py-3">
+          <h1 class="rsk-text-xl rsk-font-bold rsk-m-0">Responsive Design System</h1>
+          <nav>
+            <ul class="rsk-nav">
+              <li><a class="rsk-nav-link active" href="index.html">Home</a></li>
+              <li><a class="rsk-nav-link" href="components.html">Components</a></li>
+              <li><a class="rsk-nav-link" href="examples.html">Examples</a></li>
+              <li><a class="rsk-nav-link" href="documentation.html">Documentation</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="rsk-container">
+    <!-- Hero -->
+    <section class="hero rsk-rounded-xl rsk-p-5 rsk-mb-4 rsk-text-center">
+      <h2 class="rsk-responsive-heading rsk-m-0 rsk-mb-2">Build with design tokens & components</h2>
+      <p class="rsk-text-lg rsk-m-0" style="opacity: 0.95;">Component library, design tokens, grid system, utility classes, themes, animations, and responsive patterns. By <a href="https://rskworld.in" style="color: inherit; text-decoration: underline;">RSK World</a>.</p>
+      <p class="rsk-m-0 rsk-mt-2"><a href="components.html" style="color: inherit; text-decoration: underline;">Components</a> (tabs, modal, theme) · <a href="examples.html" style="color: inherit; text-decoration: underline;">Examples</a> (typography, forms, tables, callouts, timeline, overlays, scroll-snap).</p>
+    </section>
+
+    <!-- Components preview -->
+    <section class="rsk-responsive-section rsk-mb-4">
+      <h3 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Components</h3>
+      <div class="rsk-responsive-grid rsk-mb-4">
+        <div class="rsk-card">
+          <div class="rsk-card-body">
+            <h4 class="rsk-text-lg rsk-font-semibold rsk-mb-2">Buttons</h4>
+            <div class="rsk-d-flex rsk-gap-2 rsk-flex-wrap">
+              <button type="button" class="rsk-btn rsk-btn-primary">Primary</button>
+              <button type="button" class="rsk-btn rsk-btn-secondary">Secondary</button>
+              <button type="button" class="rsk-btn rsk-btn-outline-primary">Outline</button>
+              <button type="button" class="rsk-btn rsk-btn-primary rsk-btn-sm">Small</button>
+              <button type="button" class="rsk-btn rsk-btn-primary rsk-btn-lg">Large</button>
+            </div>
+          </div>
+        </div>
+        <div class="rsk-card">
+          <div class="rsk-card-body">
+            <h4 class="rsk-text-lg rsk-font-semibold rsk-mb-2">Badges</h4>
+            <div class="rsk-d-flex rsk-gap-2 rsk-flex-wrap">
+              <span class="rsk-badge rsk-badge-primary">Primary</span>
+              <span class="rsk-badge rsk-badge-success">Success</span>
+              <span class="rsk-badge rsk-badge-warning">Warning</span>
+              <span class="rsk-badge rsk-badge-danger">Danger</span>
+              <span class="rsk-badge rsk-badge-info">Info</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Alerts</h3>
+      <div class="rsk-mb-4">
+        <div class="rsk-alert rsk-alert-primary">Primary alert – design system by RSK World.</div>
+        <div class="rsk-alert rsk-alert-success">Success alert – components and utilities ready to use.</div>
+        <div class="rsk-alert rsk-alert-warning">Warning alert – customize with design tokens.</div>
+        <div class="rsk-alert rsk-alert-danger">Danger alert – responsive and accessible.</div>
+      </div>
+
+      <h3 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Cards & Grid</h3>
+      <div class="rsk-row rsk-mb-4" style="--rsk-gutter-x: 1rem;">
+        <div class="rsk-col rsk-col-12 rsk-col-md-6 rsk-col-lg-4">
+          <div class="rsk-card">
+            <div class="rsk-card-header">Card One</div>
+            <div class="rsk-card-body">Content with design tokens and utilities. Responsive grid.</div>
+            <div class="rsk-card-footer">Footer</div>
+          </div>
+        </div>
+        <div class="rsk-col rsk-col-12 rsk-col-md-6 rsk-col-lg-4">
+          <div class="rsk-card">
+            <div class="rsk-card-header">Card Two</div>
+            <div class="rsk-card-body">Component library for consistent UI. By rskworld.in.</div>
+            <div class="rsk-card-footer">Footer</div>
+          </div>
+        </div>
+        <div class="rsk-col rsk-col-12 rsk-col-md-6 rsk-col-lg-4">
+          <div class="rsk-card">
+            <div class="rsk-card-header">Card Three</div>
+            <div class="rsk-card-body">Documentation and responsive patterns included.</div>
+            <div class="rsk-card-footer">Footer</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Form elements</h3>
+      <div class="rsk-card rsk-mb-4" style="max-width: 24rem;">
+        <div class="rsk-card-body">
+          <label class="rsk-label" for="demo-input">Label</label>
+          <input type="text" id="demo-input" class="rsk-input rsk-mb-3" placeholder="Input placeholder">
+          <label class="rsk-label" for="demo-select">Select</label>
+          <select id="demo-select" class="rsk-select rsk-mb-3">
+            <option>Option one</option>
+            <option>Option two</option>
+          </select>
+          <label class="rsk-label" for="demo-textarea">Textarea</label>
+          <textarea id="demo-textarea" class="rsk-textarea" placeholder="Textarea placeholder"></textarea>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rsk-container rsk-pt-4 rsk-pb-4 rsk-border" style="border-left: 0; border-right: 0; border-bottom: 0;">
+    <p class="rsk-text-center footer-credit rsk-m-0">
+      Responsive Design System © 2026 <a href="https://rskworld.in">RSK World</a>. Founder: Molla Samser. 
+      Email: help@rskworld.in | Phone: +91 93305 39277 | Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147.
+    </p>
+  </footer>
+</body>
+</html>

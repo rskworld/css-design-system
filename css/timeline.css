@@ -1,0 +1,143 @@
+/*
+ * Timeline / Steps - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+.rsk-timeline {
+  position: relative;
+  padding-left: var(--rsk-space-8);
+}
+
+.rsk-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--rsk-border, var(--rsk-color-gray-200));
+  border-radius: var(--rsk-radius-full);
+}
+
+.rsk-timeline-item {
+  position: relative;
+  padding-bottom: var(--rsk-space-6);
+}
+
+.rsk-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.rsk-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--rsk-space-8) + 0.25rem);
+  top: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: var(--rsk-radius-full);
+  background: var(--rsk-color-primary);
+  border: 2px solid var(--rsk-surface, var(--rsk-color-white));
+  box-shadow: 0 0 0 2px var(--rsk-color-primary);
+}
+
+.rsk-timeline-item-success::before { background: var(--rsk-color-success); box-shadow: 0 0 0 2px var(--rsk-color-success); }
+.rsk-timeline-item-warning::before { background: var(--rsk-color-warning); box-shadow: 0 0 0 2px var(--rsk-color-warning); }
+.rsk-timeline-item-danger::before { background: var(--rsk-color-danger); box-shadow: 0 0 0 2px var(--rsk-color-danger); }
+
+.rsk-timeline-time {
+  font-size: var(--rsk-text-xs);
+  color: var(--rsk-text-muted, var(--rsk-color-gray-600));
+  margin-bottom: var(--rsk-space-1);
+}
+
+.rsk-timeline-title {
+  font-weight: var(--rsk-font-semibold);
+  font-size: var(--rsk-text-base);
+  margin: 0 0 var(--rsk-space-1);
+  color: var(--rsk-text, var(--rsk-color-gray-800));
+}
+
+.rsk-timeline-content {
+  font-size: var(--rsk-text-sm);
+  line-height: 1.5;
+  color: var(--rsk-text-muted, var(--rsk-color-gray-600));
+  margin: 0;
+}
+
+/* Horizontal steps (stepper) */
+.rsk-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--rsk-space-2);
+  margin-bottom: var(--rsk-space-4);
+}
+
+.rsk-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.rsk-step::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: calc(50% + 1.5rem);
+  right: calc(-50% + 1.5rem);
+  height: 2px;
+  background: var(--rsk-color-gray-200);
+  z-index: 0;
+}
+
+.rsk-step:last-child::after {
+  display: none;
+}
+
+.rsk-step-number {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--rsk-radius-full);
+  background: var(--rsk-color-gray-200);
+  color: var(--rsk-color-gray-600);
+  font-size: var(--rsk-text-sm);
+  font-weight: var(--rsk-font-semibold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--rsk-space-2);
+  position: relative;
+  z-index: 1;
+}
+
+.rsk-step.is-active .rsk-step-number {
+  background: var(--rsk-color-primary);
+  color: var(--rsk-color-primary-contrast);
+}
+
+.rsk-step.is-done .rsk-step-number {
+  background: var(--rsk-color-success);
+  color: #fff;
+}
+
+.rsk-step.is-done::after {
+  background: var(--rsk-color-success);
+}
+
+.rsk-step-label {
+  font-size: var(--rsk-text-xs);
+  font-weight: var(--rsk-font-medium);
+  color: var(--rsk-text-muted, var(--rsk-color-gray-600));
+}
+
+.rsk-step.is-active .rsk-step-label {
+  color: var(--rsk-color-primary);
+}

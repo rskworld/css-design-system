@@ -1,0 +1,135 @@
+/*
+ * Overlays - Card overlay, hero overlay, backdrop
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+/* Card with image and overlay caption */
+.rsk-card-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--rsk-radius-xl);
+  background: var(--rsk-color-gray-900);
+}
+
+.rsk-card-overlay-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--rsk-duration-normal) var(--rsk-ease-default);
+}
+
+.rsk-card-overlay:hover .rsk-card-overlay-img {
+  transform: scale(1.03);
+}
+
+.rsk-card-overlay-caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--rsk-space-4);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 50%);
+  color: #fff;
+}
+
+.rsk-card-overlay-title {
+  margin: 0 0 var(--rsk-space-1);
+  font-size: var(--rsk-text-lg);
+  font-weight: var(--rsk-font-semibold);
+}
+
+.rsk-card-overlay-text {
+  margin: 0;
+  font-size: var(--rsk-text-sm);
+  opacity: 0.9;
+}
+
+/* Hero overlay - full-width with overlay text */
+.rsk-hero-overlay {
+  position: relative;
+  min-height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--rsk-space-8) var(--rsk-space-4);
+  background-color: var(--rsk-color-gray-800);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.rsk-hero-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.rsk-hero-overlay-content {
+  position: relative;
+  z-index: 1;
+  max-width: 40rem;
+}
+
+.rsk-hero-overlay-title {
+  margin: 0 0 var(--rsk-space-2);
+  font-size: clamp(var(--rsk-text-2xl), 4vw, var(--rsk-text-4xl));
+  font-weight: var(--rsk-font-bold);
+  line-height: 1.2;
+}
+
+.rsk-hero-overlay-lead {
+  margin: 0;
+  font-size: var(--rsk-text-lg);
+  opacity: 0.95;
+}
+
+/* Backdrop overlay - dimmed fullscreen layer */
+.rsk-overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--rsk-duration-normal), visibility var(--rsk-duration-normal);
+}
+
+.rsk-overlay-backdrop.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Inline overlay - text on image (no hover required) */
+.rsk-media-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--rsk-radius-lg);
+}
+
+.rsk-media-overlay img {
+  width: 100%;
+  display: block;
+  vertical-align: middle;
+}
+
+.rsk-media-overlay-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--rsk-space-3) var(--rsk-space-4);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  font-size: var(--rsk-text-sm);
+  margin: 0;
+}

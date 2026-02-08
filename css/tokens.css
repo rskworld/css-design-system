@@ -1,0 +1,110 @@
+/*
+ * Design Tokens - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+:root {
+  /* Colors - Primary */
+  --rsk-color-primary: #4a90e2;
+  --rsk-color-primary-light: #6ba3e8;
+  --rsk-color-primary-dark: #357abd;
+  --rsk-color-primary-contrast: #ffffff;
+
+  /* Colors - Semantic */
+  --rsk-color-success: #28a745;
+  --rsk-color-warning: #ffc107;
+  --rsk-color-danger: #dc3545;
+  --rsk-color-info: #17a2b8;
+
+  /* Neutrals */
+  --rsk-color-white: #ffffff;
+  --rsk-color-gray-50: #f8f9fa;
+  --rsk-color-gray-100: #f1f3f5;
+  --rsk-color-gray-200: #e9ecef;
+  --rsk-color-gray-300: #dee2e6;
+  --rsk-color-gray-400: #ced4da;
+  --rsk-color-gray-500: #adb5bd;
+  --rsk-color-gray-600: #6c757d;
+  --rsk-color-gray-700: #495057;
+  --rsk-color-gray-800: #343a40;
+  --rsk-color-gray-900: #212529;
+  --rsk-color-black: #000000;
+
+  /* Typography - Font families */
+  --rsk-font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --rsk-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  --rsk-font-serif: Georgia, "Times New Roman", Times, serif;
+
+  /* Typography - Sizes */
+  --rsk-text-xs: 0.75rem;
+  --rsk-text-sm: 0.875rem;
+  --rsk-text-base: 1rem;
+  --rsk-text-lg: 1.125rem;
+  --rsk-text-xl: 1.25rem;
+  --rsk-text-2xl: 1.5rem;
+  --rsk-text-3xl: 1.875rem;
+  --rsk-text-4xl: 2.25rem;
+  --rsk-text-5xl: 3rem;
+
+  /* Typography - Weights */
+  --rsk-font-normal: 400;
+  --rsk-font-medium: 500;
+  --rsk-font-semibold: 600;
+  --rsk-font-bold: 700;
+
+  /* Spacing scale (4px base) */
+  --rsk-space-0: 0;
+  --rsk-space-1: 0.25rem;   /* 4px */
+  --rsk-space-2: 0.5rem;    /* 8px */
+  --rsk-space-3: 0.75rem;   /* 12px */
+  --rsk-space-4: 1rem;     /* 16px */
+  --rsk-space-5: 1.25rem;  /* 20px */
+  --rsk-space-6: 1.5rem;   /* 24px */
+  --rsk-space-8: 2rem;     /* 32px */
+  --rsk-space-10: 2.5rem;  /* 40px */
+  --rsk-space-12: 3rem;    /* 48px */
+  --rsk-space-16: 4rem;    /* 64px */
+  --rsk-space-20: 5rem;    /* 80px */
+  --rsk-space-24: 6rem;    /* 96px */
+
+  /* Border radius */
+  --rsk-radius-sm: 0.25rem;   /* 4px */
+  --rsk-radius-md: 0.375rem;  /* 6px */
+  --rsk-radius-lg: 0.5rem;    /* 8px */
+  --rsk-radius-xl: 0.75rem;   /* 12px */
+  --rsk-radius-2xl: 1rem;     /* 16px */
+  --rsk-radius-full: 9999px;
+
+  /* Shadows */
+  --rsk-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --rsk-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --rsk-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --rsk-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --rsk-duration-fast: 150ms;
+  --rsk-duration-normal: 300ms;
+  --rsk-duration-slow: 500ms;
+  --rsk-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --rsk-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --rsk-ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  /* Breakpoints (for reference in media queries) */
+  /* sm: 576px, md: 768px, lg: 992px, xl: 1200px, 2xl: 1400px */
+  --rsk-bp-sm: 36rem;
+  --rsk-bp-md: 48rem;
+  --rsk-bp-lg: 62rem;
+  --rsk-bp-xl: 75rem;
+  --rsk-bp-2xl: 87.5rem;
+
+  /* Container max-widths */
+  --rsk-container-sm: 540px;
+  --rsk-container-md: 720px;
+  --rsk-container-lg: 960px;
+  --rsk-container-xl: 1140px;
+  --rsk-container-2xl: 1320px;
+}

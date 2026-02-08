@@ -1,0 +1,75 @@
+/*
+ * Tables - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+.rsk-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--rsk-text-sm);
+  color: var(--rsk-text, var(--rsk-color-gray-800));
+}
+
+.rsk-table th,
+.rsk-table td {
+  padding: var(--rsk-space-2) var(--rsk-space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--rsk-border, var(--rsk-color-gray-200));
+}
+
+.rsk-table th {
+  font-weight: var(--rsk-font-semibold);
+  background: var(--rsk-surface-elevated, var(--rsk-color-gray-50));
+  color: var(--rsk-text, var(--rsk-color-gray-800));
+}
+
+.rsk-table tbody tr:hover {
+  background: var(--rsk-color-gray-50);
+}
+
+[data-theme="dark"] .rsk-table tbody tr:hover {
+  background: var(--rsk-surface-elevated);
+}
+
+.rsk-table-striped tbody tr:nth-child(even) {
+  background: var(--rsk-color-gray-50);
+}
+
+.rsk-table-striped tbody tr:nth-child(even):hover {
+  background: var(--rsk-color-gray-200);
+}
+
+[data-theme="dark"] .rsk-table-striped tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.rsk-table-bordered th,
+.rsk-table-bordered td {
+  border: 1px solid var(--rsk-border, var(--rsk-color-gray-200));
+}
+
+.rsk-table-compact th,
+.rsk-table-compact td {
+  padding: var(--rsk-space-1) var(--rsk-space-2);
+  font-size: var(--rsk-text-xs);
+}
+
+.rsk-table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: var(--rsk-space-4);
+}
+
+.rsk-table-responsive .rsk-table {
+  margin-bottom: 0;
+  min-width: 32rem;
+}
+
+.rsk-table thead th.rsk-text-center,
+.rsk-table td.rsk-text-center { text-align: center; }
+.rsk-table thead th.rsk-text-right,
+.rsk-table td.rsk-text-right { text-align: right; }

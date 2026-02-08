@@ -1,0 +1,61 @@
+/*
+ * Focus & Accessibility - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+/* Focus visible ring - keyboard only, not mouse */
+:where(.rsk-btn,
+.rsk-input,
+.rsk-select,
+.rsk-textarea,
+.rsk-nav-link,
+.rsk-dropdown-item,
+.rsk-pagination-link,
+.rsk-modal-close,
+.rsk-accordion-trigger,
+.rsk-tabs-trigger,
+a[href],
+button):focus-visible {
+  outline: 2px solid var(--rsk-color-primary);
+  outline-offset: 2px;
+}
+
+/* Optional utility for custom focus ring */
+.rsk-focus-ring:focus-visible {
+  outline: 2px solid var(--rsk-color-primary);
+  outline-offset: 2px;
+}
+
+.rsk-focus-ring-none:focus {
+  outline: none;
+}
+
+/* Remove focus outline for mouse users (keep for keyboard) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Skip link */
+.rsk-skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--rsk-space-4);
+  z-index: 1080;
+  padding: var(--rsk-space-2) var(--rsk-space-4);
+  background: var(--rsk-color-primary);
+  color: var(--rsk-color-primary-contrast);
+  text-decoration: none;
+  font-weight: var(--rsk-font-medium);
+  border-radius: var(--rsk-radius-lg);
+  transition: top var(--rsk-duration-fast);
+}
+
+.rsk-skip-link:focus {
+  top: var(--rsk-space-4);
+  outline: 2px solid var(--rsk-color-primary-contrast);
+  outline-offset: 2px;
+}

@@ -1,0 +1,125 @@
+/*
+ * Callouts / Highlights - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ *
+ * Info, tip, warning, danger, note callout boxes with optional icon
+ */
+
+.rsk-callout {
+  display: flex;
+  gap: var(--rsk-space-3);
+  padding: var(--rsk-space-4);
+  border-radius: var(--rsk-radius-lg);
+  border: 1px solid transparent;
+  margin-bottom: var(--rsk-space-4);
+  background: var(--rsk-color-gray-50);
+  border-color: var(--rsk-color-gray-200);
+}
+
+.rsk-callout-icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.125rem;
+  color: var(--rsk-color-gray-600);
+}
+
+.rsk-callout-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.rsk-callout-title {
+  font-weight: var(--rsk-font-semibold);
+  font-size: var(--rsk-text-base);
+  margin: 0 0 var(--rsk-space-1);
+  color: var(--rsk-text, var(--rsk-color-gray-800));
+}
+
+.rsk-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.rsk-callout p {
+  margin: 0 0 var(--rsk-space-2);
+  font-size: var(--rsk-text-sm);
+  line-height: 1.5;
+  color: var(--rsk-text-muted, var(--rsk-color-gray-700));
+}
+
+/* Info */
+.rsk-callout-info {
+  background: #cfe2ff;
+  border-color: #b6d4fe;
+  color: #084298;
+}
+
+.rsk-callout-info .rsk-callout-icon { color: #084298; }
+.rsk-callout-info .rsk-callout-title { color: #052c65; }
+.rsk-callout-info .rsk-callout p { color: #084298; }
+
+/* Success / Tip */
+.rsk-callout-success {
+  background: #d1e7dd;
+  border-color: #badbcc;
+  color: #0f5132;
+}
+
+.rsk-callout-success .rsk-callout-icon { color: #0f5132; }
+.rsk-callout-success .rsk-callout-title { color: #0a3622; }
+.rsk-callout-success .rsk-callout p { color: #0f5132; }
+
+/* Warning */
+.rsk-callout-warning {
+  background: #fff3cd;
+  border-color: #ffecb5;
+  color: #664d03;
+}
+
+.rsk-callout-warning .rsk-callout-icon { color: #664d03; }
+.rsk-callout-warning .rsk-callout-title { color: #664d03; }
+.rsk-callout-warning .rsk-callout p { color: #664d03; }
+
+/* Danger */
+.rsk-callout-danger {
+  background: #f8d7da;
+  border-color: #f5c2c7;
+  color: #842029;
+}
+
+.rsk-callout-danger .rsk-callout-icon { color: #842029; }
+.rsk-callout-danger .rsk-callout-title { color: #58151c; }
+.rsk-callout-danger .rsk-callout p { color: #842029; }
+
+/* Dark theme overrides */
+[data-theme="dark"] .rsk-callout-info {
+  background: rgba(74, 144, 226, 0.2);
+  border-color: rgba(74, 144, 226, 0.4);
+}
+[data-theme="dark"] .rsk-callout-info .rsk-callout-title,
+[data-theme="dark"] .rsk-callout-info .rsk-callout p { color: #7eb5f2; }
+
+[data-theme="dark"] .rsk-callout-success {
+  background: rgba(40, 167, 69, 0.2);
+  border-color: rgba(40, 167, 69, 0.4);
+}
+[data-theme="dark"] .rsk-callout-success .rsk-callout-title,
+[data-theme="dark"] .rsk-callout-success .rsk-callout p { color: #75d894; }
+
+[data-theme="dark"] .rsk-callout-warning {
+  background: rgba(255, 193, 7, 0.15);
+  border-color: rgba(255, 193, 7, 0.4);
+}
+[data-theme="dark"] .rsk-callout-warning .rsk-callout-title,
+[data-theme="dark"] .rsk-callout-warning .rsk-callout p { color: #ffda6a; }
+
+[data-theme="dark"] .rsk-callout-danger {
+  background: rgba(220, 53, 69, 0.2);
+  border-color: rgba(220, 53, 69, 0.4);
+}
+[data-theme="dark"] .rsk-callout-danger .rsk-callout-title,
+[data-theme="dark"] .rsk-callout-danger .rsk-callout p { color: #f08a94; }

@@ -1,0 +1,131 @@
+/*
+ * Responsive Patterns - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+/* Responsive visibility - show/hide by breakpoint */
+@media (max-width: 35.99rem) {
+  .rsk-show-sm { display: none !important; }
+  .rsk-hide-sm { display: block !important; }
+}
+
+@media (min-width: 36rem) {
+  .rsk-show-sm { display: block !important; }
+  .rsk-hide-sm { display: none !important; }
+}
+
+@media (max-width: 47.99rem) {
+  .rsk-show-md { display: none !important; }
+  .rsk-hide-md { display: block !important; }
+}
+
+@media (min-width: 48rem) {
+  .rsk-show-md { display: block !important; }
+  .rsk-hide-md { display: none !important; }
+}
+
+@media (max-width: 61.99rem) {
+  .rsk-show-lg { display: none !important; }
+  .rsk-hide-lg { display: block !important; }
+}
+
+@media (min-width: 62rem) {
+  .rsk-show-lg { display: block !important; }
+  .rsk-hide-lg { display: none !important; }
+}
+
+/* Responsive typography scaling */
+.rsk-responsive-text {
+  font-size: clamp(var(--rsk-text-base), 2vw + 0.5rem, var(--rsk-text-2xl));
+}
+
+.rsk-responsive-heading {
+  font-size: clamp(var(--rsk-text-2xl), 4vw + 1rem, var(--rsk-text-4xl));
+}
+
+/* Responsive spacing - reduce on small screens */
+@media (max-width: 47.99rem) {
+  .rsk-responsive-section {
+    padding-top: var(--rsk-space-6);
+    padding-bottom: var(--rsk-space-6);
+  }
+}
+
+@media (min-width: 48rem) {
+  .rsk-responsive-section {
+    padding-top: var(--rsk-space-12);
+    padding-bottom: var(--rsk-space-12);
+  }
+}
+
+/* Responsive container padding */
+@media (max-width: 35.99rem) {
+  .rsk-container {
+    padding-left: var(--rsk-space-3);
+    padding-right: var(--rsk-space-3);
+  }
+}
+
+/* Stack to row - responsive layout pattern */
+.rsk-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rsk-space-4);
+}
+
+@media (min-width: 48rem) {
+  .rsk-stack-row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Responsive grid pattern - auto-fit minmax */
+.rsk-responsive-grid {
+  display: grid;
+  gap: var(--rsk-space-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+
+.rsk-responsive-grid-sm {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+.rsk-responsive-grid-lg {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+}
+
+/* Responsive images */
+.rsk-img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive aspect ratios */
+.rsk-aspect-16-9 {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.rsk-aspect-4-3 {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.rsk-aspect-1-1 {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .rsk-btn,
+  .rsk-card {
+    transition: none;
+  }
+}

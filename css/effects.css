@@ -1,0 +1,177 @@
+/*
+ * Effects & Extra Components - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ *
+ * Progress bar, avatar, divider, spinner, empty state
+ */
+
+/* Progress bar */
+.rsk-progress {
+  height: 0.5rem;
+  background: var(--rsk-color-gray-200);
+  border-radius: var(--rsk-radius-full);
+  overflow: hidden;
+}
+
+.rsk-progress-bar {
+  height: 100%;
+  background: var(--rsk-color-primary);
+  border-radius: var(--rsk-radius-full);
+  transition: width var(--rsk-duration-normal) var(--rsk-ease-default);
+}
+
+.rsk-progress-bar-success { background: var(--rsk-color-success); }
+.rsk-progress-bar-warning { background: var(--rsk-color-warning); }
+.rsk-progress-bar-danger { background: var(--rsk-color-danger); }
+
+.rsk-progress-lg {
+  height: 0.75rem;
+}
+
+/* Avatar */
+.rsk-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--rsk-radius-full);
+  background: var(--rsk-color-primary);
+  color: var(--rsk-color-primary-contrast);
+  font-weight: var(--rsk-font-semibold);
+  font-size: var(--rsk-text-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.rsk-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rsk-avatar-sm { width: 2rem; height: 2rem; font-size: var(--rsk-text-xs); }
+.rsk-avatar-lg { width: 3.5rem; height: 3.5rem; font-size: var(--rsk-text-base); }
+.rsk-avatar-xl { width: 4.5rem; height: 4.5rem; font-size: var(--rsk-text-lg); }
+
+/* Avatar group - overlapping */
+.rsk-avatar-group {
+  display: flex;
+}
+
+.rsk-avatar-group .rsk-avatar {
+  margin-left: -0.75rem;
+  border: 2px solid var(--rsk-surface, var(--rsk-color-white));
+}
+
+.rsk-avatar-group .rsk-avatar:first-child {
+  margin-left: 0;
+}
+
+/* Divider */
+.rsk-divider {
+  height: 1px;
+  margin: var(--rsk-space-4) 0;
+  background: var(--rsk-border, var(--rsk-color-gray-200));
+  border: 0;
+}
+
+.rsk-divider-vertical {
+  width: 1px;
+  height: auto;
+  align-self: stretch;
+  margin: 0 var(--rsk-space-4);
+}
+
+.rsk-divider-text {
+  display: flex;
+  align-items: center;
+  gap: var(--rsk-space-3);
+  margin: var(--rsk-space-4) 0;
+  color: var(--rsk-text-muted, var(--rsk-color-gray-600));
+  font-size: var(--rsk-text-sm);
+}
+
+.rsk-divider-text::before,
+.rsk-divider-text::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rsk-border, var(--rsk-color-gray-200));
+}
+
+/* Spinner */
+.rsk-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--rsk-color-gray-200);
+  border-top-color: var(--rsk-color-primary);
+  border-radius: var(--rsk-radius-full);
+  animation: rsk-spin 0.8s linear infinite;
+}
+
+@keyframes rsk-spin {
+  to { transform: rotate(360deg); }
+}
+
+.rsk-spinner-sm { width: 1.25rem; height: 1.25rem; border-width: 1.5px; }
+.rsk-spinner-lg { width: 2.5rem; height: 2.5rem; border-width: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rsk-spinner { animation-duration: 1.5s; }
+}
+
+/* Empty state */
+.rsk-empty-state {
+  text-align: center;
+  padding: var(--rsk-space-8) var(--rsk-space-4);
+}
+
+.rsk-empty-state-icon {
+  font-size: 3rem;
+  color: var(--rsk-color-gray-400);
+  margin-bottom: var(--rsk-space-3);
+  line-height: 1;
+}
+
+.rsk-empty-state-title {
+  font-size: var(--rsk-text-lg);
+  font-weight: var(--rsk-font-semibold);
+  margin: 0 0 var(--rsk-space-2);
+  color: var(--rsk-text, var(--rsk-color-gray-800));
+}
+
+.rsk-empty-state-text {
+  font-size: var(--rsk-text-base);
+  color: var(--rsk-text-muted, var(--rsk-color-gray-600));
+  margin: 0 0 var(--rsk-space-4);
+  max-width: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card with image on top */
+.rsk-card-img-top {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--rsk-radius-xl) var(--rsk-radius-xl) 0 0;
+}
+
+.rsk-card:has(.rsk-card-img-top) .rsk-card-body:first-of-type {
+  border-radius: 0;
+}
+
+/* Blur and backdrop (for overlays) */
+.rsk-blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.rsk-blur-sm { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.rsk-blur-lg { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }

@@ -1,0 +1,195 @@
+/*
+ * Forms Advanced - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ *
+ * Checkbox, radio, switch, form group, validation states
+ */
+
+/* Form group - label + input + hint/error */
+.rsk-form-group {
+  margin-bottom: var(--rsk-space-4);
+}
+
+.rsk-form-group .rsk-label {
+  display: block;
+  margin-bottom: var(--rsk-space-1);
+}
+
+.rsk-form-hint {
+  font-size: var(--rsk-text-sm);
+  color: var(--rsk-text-muted, var(--rsk-color-gray-600));
+  margin-top: var(--rsk-space-1);
+}
+
+.rsk-form-error {
+  font-size: var(--rsk-text-sm);
+  color: var(--rsk-color-danger);
+  margin-top: var(--rsk-space-1);
+}
+
+/* Checkbox & Radio - custom styled */
+.rsk-form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--rsk-space-2);
+  margin-bottom: var(--rsk-space-2);
+  cursor: pointer;
+}
+
+.rsk-form-check-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.125rem 0 0;
+  flex-shrink: 0;
+  accent-color: var(--rsk-color-primary);
+  cursor: pointer;
+}
+
+.rsk-form-check-label {
+  font-size: var(--rsk-text-base);
+  cursor: pointer;
+  margin: 0;
+}
+
+.rsk-form-check-inline {
+  display: inline-flex;
+  margin-right: var(--rsk-space-4);
+  margin-bottom: 0;
+}
+
+/* Switch (toggle) */
+.rsk-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rsk-space-2);
+  cursor: pointer;
+}
+
+.rsk-switch-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.rsk-switch-track {
+  width: 2.75rem;
+  height: 1.5rem;
+  background: var(--rsk-color-gray-300);
+  border-radius: var(--rsk-radius-full);
+  transition: background-color var(--rsk-duration-fast);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 0.125rem;
+  box-sizing: border-box;
+}
+
+.rsk-switch-thumb {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: var(--rsk-color-white);
+  border-radius: var(--rsk-radius-full);
+  box-shadow: var(--rsk-shadow-sm);
+  transition: transform var(--rsk-duration-fast) var(--rsk-ease-default);
+  flex-shrink: 0;
+}
+
+.rsk-switch-input:checked + .rsk-switch-track {
+  background: var(--rsk-color-primary);
+  justify-content: flex-end;
+}
+
+.rsk-switch-input:focus-visible + .rsk-switch-track {
+  outline: 2px solid var(--rsk-color-primary);
+  outline-offset: 2px;
+}
+
+.rsk-switch-label {
+  font-size: var(--rsk-text-base);
+  user-select: none;
+}
+
+/* Input group - addon before/after */
+.rsk-input-group {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.rsk-input-group .rsk-input,
+.rsk-input-group .rsk-select {
+  flex: 1;
+  min-width: 0;
+  border-radius: 0;
+}
+
+.rsk-input-group .rsk-input:first-child,
+.rsk-input-group .rsk-select:first-child {
+  border-top-left-radius: var(--rsk-radius-lg);
+  border-bottom-left-radius: var(--rsk-radius-lg);
+}
+
+.rsk-input-group .rsk-input:last-child,
+.rsk-input-group .rsk-select:last-child {
+  border-top-right-radius: var(--rsk-radius-lg);
+  border-bottom-right-radius: var(--rsk-radius-lg);
+}
+
+.rsk-input-group-addon {
+  display: flex;
+  align-items: center;
+  padding: var(--rsk-space-2) var(--rsk-space-3);
+  background: var(--rsk-color-gray-100);
+  border: 1px solid var(--rsk-color-gray-300);
+  font-size: var(--rsk-text-base);
+  color: var(--rsk-text-muted, var(--rsk-color-gray-600));
+  white-space: nowrap;
+}
+
+.rsk-input-group-addon:first-child {
+  border-right: 0;
+  border-radius: var(--rsk-radius-lg) 0 0 var(--rsk-radius-lg);
+}
+
+.rsk-input-group-addon:last-child {
+  border-left: 0;
+  border-radius: 0 var(--rsk-radius-lg) var(--rsk-radius-lg) 0;
+}
+
+/* Validation states */
+.rsk-input.is-valid,
+.rsk-select.is-valid,
+.rsk-textarea.is-valid {
+  border-color: var(--rsk-color-success);
+}
+
+.rsk-input.is-invalid,
+.rsk-select.is-invalid,
+.rsk-textarea.is-invalid {
+  border-color: var(--rsk-color-danger);
+}
+
+.rsk-input.is-invalid:focus,
+.rsk-select.is-invalid:focus,
+.rsk-textarea.is-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+}
+
+/* Disabled */
+.rsk-input:disabled,
+.rsk-select:disabled,
+.rsk-textarea:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background: var(--rsk-color-gray-100);
+}

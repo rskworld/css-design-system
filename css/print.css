@@ -1,0 +1,61 @@
+/*
+ * Print Styles - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+@media print {
+  /* Reset backgrounds and shadows for print */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .rsk-card,
+  .rsk-modal,
+  .rsk-dropdown-menu {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+
+  /* Hide non-essential UI */
+  .rsk-modal-backdrop,
+  .rsk-dropdown-menu,
+  .rsk-tooltip-content,
+  .rsk-btn:not(.rsk-print-show),
+  nav[aria-label="Main"],
+  .rsk-no-print {
+    display: none !important;
+  }
+
+  /* Show links URL after text */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #666;
+  }
+
+  /* Avoid breaking inside */
+  .rsk-card,
+  .rsk-modal,
+  pre,
+  table {
+    break-inside: avoid;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 2cm;
+  }
+
+  /* Reduce animations */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}

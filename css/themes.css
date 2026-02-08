@@ -1,0 +1,82 @@
+/*
+ * Themes (Light / Dark) - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+/* Light theme (default) - semantic surface/text tokens */
+:root,
+[data-theme="light"] {
+  --rsk-surface: var(--rsk-color-white);
+  --rsk-surface-elevated: var(--rsk-color-gray-50);
+  --rsk-surface-overlay: var(--rsk-color-white);
+  --rsk-text: var(--rsk-color-gray-800);
+  --rsk-text-muted: var(--rsk-color-gray-600);
+  --rsk-border: var(--rsk-color-gray-200);
+  --rsk-border-strong: var(--rsk-color-gray-300);
+  --rsk-input-bg: var(--rsk-color-white);
+  --rsk-input-border: var(--rsk-color-gray-300);
+  --rsk-shadow-color: 0, 0, 0;
+  --rsk-shadow-strength: 0.1;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --rsk-color-primary: #5da3ef;
+  --rsk-color-primary-light: #7eb5f2;
+  --rsk-color-primary-dark: #4a8fd9;
+  --rsk-surface: #1a1d21;
+  --rsk-surface-elevated: #24282d;
+  --rsk-surface-overlay: #2d3238;
+  --rsk-text: #e4e6eb;
+  --rsk-text-muted: #b0b3b8;
+  --rsk-border: #3e444b;
+  --rsk-border-strong: #4e555d;
+  --rsk-input-bg: #24282d;
+  --rsk-input-border: #4e555d;
+  --rsk-color-gray-50: #24282d;
+  --rsk-color-gray-100: #2d3238;
+  --rsk-color-gray-200: #3e444b;
+  --rsk-color-gray-800: #e4e6eb;
+  --rsk-color-gray-900: #f0f2f5;
+  --rsk-shadow-color: 0, 0, 0;
+  --rsk-shadow-strength: 0.4;
+}
+
+[data-theme="dark"] .rsk-card {
+  background-color: var(--rsk-surface-elevated);
+  border-color: var(--rsk-border);
+}
+
+[data-theme="dark"] .rsk-card-header,
+[data-theme="dark"] .rsk-card-footer {
+  border-color: var(--rsk-border);
+  background-color: var(--rsk-surface);
+}
+
+[data-theme="dark"] .rsk-input,
+[data-theme="dark"] .rsk-select,
+[data-theme="dark"] .rsk-textarea {
+  background-color: var(--rsk-input-bg);
+  border-color: var(--rsk-input-border);
+  color: var(--rsk-text);
+}
+
+[data-theme="dark"] .rsk-alert-primary { background-color: rgba(74, 144, 226, 0.2); border-color: rgba(74, 144, 226, 0.4); color: #7eb5f2; }
+[data-theme="dark"] .rsk-alert-success { background-color: rgba(40, 167, 69, 0.2); border-color: rgba(40, 167, 69, 0.4); color: #75d894; }
+[data-theme="dark"] .rsk-alert-warning { background-color: rgba(255, 193, 7, 0.15); border-color: rgba(255, 193, 7, 0.4); color: #ffda6a; }
+[data-theme="dark"] .rsk-alert-danger { background-color: rgba(220, 53, 69, 0.2); border-color: rgba(220, 53, 69, 0.4); color: #f08a94; }
+
+/* System preference: respect prefers-color-scheme when no data-theme set */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --rsk-surface: #1a1d21;
+    --rsk-surface-elevated: #24282d;
+    --rsk-text: #e4e6eb;
+    --rsk-text-muted: #b0b3b8;
+    --rsk-border: #3e444b;
+  }
+}

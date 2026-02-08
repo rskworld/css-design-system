@@ -1,0 +1,120 @@
+/*
+ * Grid System - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+/* Container */
+.rsk-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--rsk-space-4);
+  padding-right: var(--rsk-space-4);
+}
+
+@media (min-width: 36rem) {
+  .rsk-container { max-width: var(--rsk-container-sm); }
+}
+
+@media (min-width: 48rem) {
+  .rsk-container { max-width: var(--rsk-container-md); }
+}
+
+@media (min-width: 62rem) {
+  .rsk-container { max-width: var(--rsk-container-lg); }
+}
+
+@media (min-width: 75rem) {
+  .rsk-container { max-width: var(--rsk-container-xl); }
+}
+
+@media (min-width: 87.5rem) {
+  .rsk-container { max-width: var(--rsk-container-2xl); }
+}
+
+/* Row - Flexbox-based grid row */
+.rsk-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--rsk-gutter-x, 1rem) * -0.5);
+  margin-right: calc(var(--rsk-gutter-x, 1rem) * -0.5);
+}
+
+/* Columns - 12-column grid */
+.rsk-col {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-left: calc(var(--rsk-gutter-x, 1rem) * 0.5);
+  padding-right: calc(var(--rsk-gutter-x, 1rem) * 0.5);
+}
+
+.rsk-col-1 { width: 8.333333%; }
+.rsk-col-2 { width: 16.666667%; }
+.rsk-col-3 { width: 25%; }
+.rsk-col-4 { width: 33.333333%; }
+.rsk-col-5 { width: 41.666667%; }
+.rsk-col-6 { width: 50%; }
+.rsk-col-7 { width: 58.333333%; }
+.rsk-col-8 { width: 66.666667%; }
+.rsk-col-9 { width: 75%; }
+.rsk-col-10 { width: 83.333333%; }
+.rsk-col-11 { width: 91.666667%; }
+.rsk-col-12 { width: 100%; }
+
+/* Responsive column classes */
+@media (min-width: 36rem) {
+  .rsk-col-sm-1 { width: 8.333333%; }
+  .rsk-col-sm-2 { width: 16.666667%; }
+  .rsk-col-sm-3 { width: 25%; }
+  .rsk-col-sm-4 { width: 33.333333%; }
+  .rsk-col-sm-5 { width: 41.666667%; }
+  .rsk-col-sm-6 { width: 50%; }
+  .rsk-col-sm-7 { width: 58.333333%; }
+  .rsk-col-sm-8 { width: 66.666667%; }
+  .rsk-col-sm-9 { width: 75%; }
+  .rsk-col-sm-10 { width: 83.333333%; }
+  .rsk-col-sm-11 { width: 91.666667%; }
+  .rsk-col-sm-12 { width: 100%; }
+}
+
+@media (min-width: 48rem) {
+  .rsk-col-md-1 { width: 8.333333%; }
+  .rsk-col-md-2 { width: 16.666667%; }
+  .rsk-col-md-3 { width: 25%; }
+  .rsk-col-md-4 { width: 33.333333%; }
+  .rsk-col-md-5 { width: 41.666667%; }
+  .rsk-col-md-6 { width: 50%; }
+  .rsk-col-md-7 { width: 58.333333%; }
+  .rsk-col-md-8 { width: 66.666667%; }
+  .rsk-col-md-9 { width: 75%; }
+  .rsk-col-md-10 { width: 83.333333%; }
+  .rsk-col-md-11 { width: 91.666667%; }
+  .rsk-col-md-12 { width: 100%; }
+}
+
+@media (min-width: 62rem) {
+  .rsk-col-lg-1 { width: 8.333333%; }
+  .rsk-col-lg-2 { width: 16.666667%; }
+  .rsk-col-lg-3 { width: 25%; }
+  .rsk-col-lg-4 { width: 33.333333%; }
+  .rsk-col-lg-5 { width: 41.666667%; }
+  .rsk-col-lg-6 { width: 50%; }
+  .rsk-col-lg-7 { width: 58.333333%; }
+  .rsk-col-lg-8 { width: 66.666667%; }
+  .rsk-col-lg-9 { width: 75%; }
+  .rsk-col-lg-10 { width: 83.333333%; }
+  .rsk-col-lg-11 { width: 91.666667%; }
+  .rsk-col-lg-12 { width: 100%; }
+}
+
+/* Gap utilities for grid */
+.rsk-gap-0 { --rsk-gutter-x: 0; }
+.rsk-gap-1 { --rsk-gutter-x: var(--rsk-space-1); }
+.rsk-gap-2 { --rsk-gutter-x: var(--rsk-space-2); }
+.rsk-gap-3 { --rsk-gutter-x: var(--rsk-space-3); }
+.rsk-gap-4 { --rsk-gutter-x: var(--rsk-space-4); }
+.rsk-gap-5 { --rsk-gutter-x: var(--rsk-space-5); }

@@ -1,0 +1,69 @@
+/*
+ * Selection & Sticky - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+/* Text selection styling */
+::selection {
+  background: rgba(74, 144, 226, 0.3);
+  color: var(--rsk-color-gray-900);
+}
+
+::-moz-selection {
+  background: rgba(74, 144, 226, 0.3);
+  color: var(--rsk-color-gray-900);
+}
+
+[data-theme="dark"] ::selection {
+  background: rgba(74, 144, 226, 0.5);
+  color: #fff;
+}
+
+[data-theme="dark"] ::-moz-selection {
+  background: rgba(74, 144, 226, 0.5);
+  color: #fff;
+}
+
+/* Sticky positioning utilities */
+.rsk-sticky {
+  position: sticky;
+}
+
+.rsk-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.rsk-sticky-bottom {
+  position: sticky;
+  bottom: 0;
+  z-index: 1020;
+}
+
+.rsk-sticky-top-2 {
+  position: sticky;
+  top: var(--rsk-space-2);
+  z-index: 1020;
+}
+
+.rsk-sticky-top-4 {
+  position: sticky;
+  top: var(--rsk-space-4);
+  z-index: 1020;
+}
+
+/* Z-index scale (for stacking context) */
+.rsk-z-0 { z-index: 0; }
+.rsk-z-10 { z-index: 10; }
+.rsk-z-20 { z-index: 20; }
+.rsk-z-30 { z-index: 30; }
+.rsk-z-40 { z-index: 40; }
+.rsk-z-50 { z-index: 50; }
+.rsk-z-dropdown { z-index: 1030; }
+.rsk-z-modal { z-index: 1050; }
+.rsk-z-tooltip { z-index: 1070; }

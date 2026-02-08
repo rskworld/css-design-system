@@ -1,0 +1,156 @@
+/*
+ * Utility Classes - Responsive Design System
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+/* Display */
+.rsk-d-none { display: none !important; }
+.rsk-d-block { display: block !important; }
+.rsk-d-inline { display: inline !important; }
+.rsk-d-inline-block { display: inline-block !important; }
+.rsk-d-flex { display: flex !important; }
+.rsk-d-inline-flex { display: inline-flex !important; }
+.rsk-d-grid { display: grid !important; }
+
+/* Flex */
+.rsk-flex-row { flex-direction: row; }
+.rsk-flex-col { flex-direction: column; }
+.rsk-flex-wrap { flex-wrap: wrap; }
+.rsk-flex-nowrap { flex-wrap: nowrap; }
+.rsk-justify-start { justify-content: flex-start; }
+.rsk-justify-end { justify-content: flex-end; }
+.rsk-justify-center { justify-content: center; }
+.rsk-justify-between { justify-content: space-between; }
+.rsk-justify-around { justify-content: space-around; }
+.rsk-items-start { align-items: flex-start; }
+.rsk-items-end { align-items: flex-end; }
+.rsk-items-center { align-items: center; }
+.rsk-items-stretch { align-items: stretch; }
+.rsk-flex-1 { flex: 1 1 0%; }
+.rsk-flex-auto { flex: 1 1 auto; }
+.rsk-gap-1 { gap: var(--rsk-space-1); }
+.rsk-gap-2 { gap: var(--rsk-space-2); }
+.rsk-gap-3 { gap: var(--rsk-space-3); }
+.rsk-gap-4 { gap: var(--rsk-space-4); }
+.rsk-gap-5 { gap: var(--rsk-space-5); }
+.rsk-gap-6 { gap: var(--rsk-space-6); }
+
+/* Spacing - Margin */
+.rsk-m-0 { margin: 0 !important; }
+.rsk-m-1 { margin: var(--rsk-space-1) !important; }
+.rsk-m-2 { margin: var(--rsk-space-2) !important; }
+.rsk-m-3 { margin: var(--rsk-space-3) !important; }
+.rsk-m-4 { margin: var(--rsk-space-4) !important; }
+.rsk-m-auto { margin: auto !important; }
+.rsk-mx-auto { margin-left: auto; margin-right: auto; }
+.rsk-mt-1 { margin-top: var(--rsk-space-1) !important; }
+.rsk-mt-2 { margin-top: var(--rsk-space-2) !important; }
+.rsk-mt-3 { margin-top: var(--rsk-space-3) !important; }
+.rsk-mt-4 { margin-top: var(--rsk-space-4) !important; }
+.rsk-mb-1 { margin-bottom: var(--rsk-space-1) !important; }
+.rsk-mb-2 { margin-bottom: var(--rsk-space-2) !important; }
+.rsk-mb-3 { margin-bottom: var(--rsk-space-3) !important; }
+.rsk-mb-4 { margin-bottom: var(--rsk-space-4) !important; }
+.rsk-ms-1 { margin-inline-start: var(--rsk-space-1) !important; }
+.rsk-me-1 { margin-inline-end: var(--rsk-space-1) !important; }
+
+/* Spacing - Padding */
+.rsk-p-0 { padding: 0 !important; }
+.rsk-p-1 { padding: var(--rsk-space-1) !important; }
+.rsk-p-2 { padding: var(--rsk-space-2) !important; }
+.rsk-p-3 { padding: var(--rsk-space-3) !important; }
+.rsk-p-4 { padding: var(--rsk-space-4) !important; }
+.rsk-p-5 { padding: var(--rsk-space-5) !important; }
+.rsk-pt-2 { padding-top: var(--rsk-space-2) !important; }
+.rsk-pt-4 { padding-top: var(--rsk-space-4) !important; }
+.rsk-pb-2 { padding-bottom: var(--rsk-space-2) !important; }
+.rsk-pb-4 { padding-bottom: var(--rsk-space-4) !important; }
+.rsk-px-3 { padding-left: var(--rsk-space-3); padding-right: var(--rsk-space-3); }
+.rsk-py-3 { padding-top: var(--rsk-space-3); padding-bottom: var(--rsk-space-3); }
+
+/* Text */
+.rsk-text-left { text-align: left; }
+.rsk-text-center { text-align: center; }
+.rsk-text-right { text-align: right; }
+.rsk-text-xs { font-size: var(--rsk-text-xs); }
+.rsk-text-sm { font-size: var(--rsk-text-sm); }
+.rsk-text-base { font-size: var(--rsk-text-base); }
+.rsk-text-lg { font-size: var(--rsk-text-lg); }
+.rsk-text-xl { font-size: var(--rsk-text-xl); }
+.rsk-text-2xl { font-size: var(--rsk-text-2xl); }
+.rsk-font-normal { font-weight: var(--rsk-font-normal); }
+.rsk-font-medium { font-weight: var(--rsk-font-medium); }
+.rsk-font-semibold { font-weight: var(--rsk-font-semibold); }
+.rsk-font-bold { font-weight: var(--rsk-font-bold); }
+.rsk-text-primary { color: var(--rsk-color-primary); }
+.rsk-text-muted { color: var(--rsk-color-gray-600); }
+.rsk-text-success { color: var(--rsk-color-success); }
+.rsk-text-danger { color: var(--rsk-color-danger); }
+.rsk-text-warning { color: var(--rsk-color-warning); }
+.rsk-uppercase { text-transform: uppercase; }
+.rsk-lowercase { text-transform: lowercase; }
+.rsk-capitalize { text-transform: capitalize; }
+.rsk-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rsk-line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Width / Height */
+.rsk-w-100 { width: 100% !important; }
+.rsk-w-auto { width: auto !important; }
+.rsk-min-w-0 { min-width: 0; }
+.rsk-h-100 { height: 100% !important; }
+
+/* Visibility */
+.rsk-visible { visibility: visible !important; }
+.rsk-invisible { visibility: hidden !important; }
+.rsk-opacity-0 { opacity: 0; }
+.rsk-opacity-50 { opacity: 0.5; }
+.rsk-opacity-100 { opacity: 1; }
+
+/* Position */
+.rsk-relative { position: relative; }
+.rsk-absolute { position: absolute; }
+.rsk-fixed { position: fixed; }
+.rsk-sticky { position: sticky; }
+
+/* Border */
+.rsk-border { border: 1px solid var(--rsk-color-gray-300); }
+.rsk-border-0 { border: 0 !important; }
+.rsk-rounded { border-radius: var(--rsk-radius-md); }
+.rsk-rounded-lg { border-radius: var(--rsk-radius-lg); }
+.rsk-rounded-full { border-radius: var(--rsk-radius-full); }
+
+/* Shadow */
+.rsk-shadow-sm { box-shadow: var(--rsk-shadow-sm); }
+.rsk-shadow { box-shadow: var(--rsk-shadow-md); }
+.rsk-shadow-lg { box-shadow: var(--rsk-shadow-lg); }
+
+/* Overflow */
+.rsk-overflow-auto { overflow: auto; }
+.rsk-overflow-hidden { overflow: hidden; }
+.rsk-overflow-visible { overflow: visible; }
+
+/* Screen reader only */
+.rsk-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

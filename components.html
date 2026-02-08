@@ -1,0 +1,253 @@
+<!--
+  Advanced Components Demo - Responsive Design System
+  © 2026 RSK World | https://rskworld.in
+  Founder: Molla Samser
+  Email: help@rskworld.in | support@rskworld.in
+  Phone: +91 93305 39277
+  Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Molla Samser - RSK World - https://rskworld.in">
+  <meta name="description" content="Advanced components: modal, tabs, dropdown, tooltip, theme. RSK World Design System.">
+  <title>Components | Responsive Design System | RSK World</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <style>
+    body { font-family: var(--rsk-font-sans); color: var(--rsk-text, var(--rsk-color-gray-800)); line-height: 1.6; background: var(--rsk-surface, var(--rsk-color-white)); }
+    .footer-credit { font-size: var(--rsk-text-sm); color: var(--rsk-text-muted, var(--rsk-color-gray-600)); }
+    .footer-credit a { color: var(--rsk-color-primary); }
+  </style>
+</head>
+<body>
+  <a href="#main" class="rsk-skip-link">Skip to main content</a>
+  <header class="rsk-card rsk-mb-4" style="border-radius: 0; border-left: 0; border-right: 0;">
+    <div class="rsk-container">
+      <div class="rsk-row" style="--rsk-gutter-x: 1rem;">
+        <div class="rsk-col rsk-col-12 rsk-d-flex rsk-justify-between rsk-items-center rsk-py-3">
+          <h1 class="rsk-text-xl rsk-font-bold rsk-m-0">Components</h1>
+          <nav aria-label="Main">
+            <ul class="rsk-nav">
+              <li><a class="rsk-nav-link" href="index.html">Home</a></li>
+              <li><a class="rsk-nav-link active" href="components.html">Components</a></li>
+              <li><a class="rsk-nav-link" href="examples.html">Examples</a></li>
+              <li><a class="rsk-nav-link" href="documentation.html">Documentation</a></li>
+              <li>
+                <div class="rsk-dropdown" id="theme-dropdown">
+                  <button type="button" class="rsk-btn rsk-btn-secondary rsk-btn-sm" id="theme-btn" aria-expanded="false" aria-haspopup="true">Theme</button>
+                  <ul class="rsk-dropdown-menu rsk-dropdown-end" role="menu">
+                    <li><button type="button" class="rsk-dropdown-item" role="menuitem" data-theme="light">Light</button></li>
+                    <li><button type="button" class="rsk-dropdown-item" role="menuitem" data-theme="dark">Dark</button></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="rsk-container">
+    <!-- Tabs -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Tabs</h2>
+      <div class="rsk-tabs">
+        <div class="rsk-tabs-list" role="tablist">
+          <button type="button" class="rsk-tabs-trigger" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1" tabindex="0">Tab One</button>
+          <button type="button" class="rsk-tabs-trigger" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2" tabindex="-1">Tab Two</button>
+          <button type="button" class="rsk-tabs-trigger" role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3" tabindex="-1">Tab Three</button>
+        </div>
+        <div id="panel-1" class="rsk-tabs-panel" role="tabpanel" aria-labelledby="tab-1" aria-hidden="false">Content for tab one. Design system by RSK World.</div>
+        <div id="panel-2" class="rsk-tabs-panel" role="tabpanel" aria-labelledby="tab-2" aria-hidden="true">Content for tab two. Components and utilities.</div>
+        <div id="panel-3" class="rsk-tabs-panel" role="tabpanel" aria-labelledby="tab-3" aria-hidden="true">Content for tab three. rskworld.in</div>
+      </div>
+    </section>
+
+    <!-- Modal & Dropdown & Tooltip -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Modal, Dropdown, Tooltip</h2>
+      <div class="rsk-d-flex rsk-gap-2 rsk-flex-wrap">
+        <button type="button" class="rsk-btn rsk-btn-primary" id="open-modal">Open modal</button>
+        <div class="rsk-dropdown" id="demo-dropdown">
+          <button type="button" class="rsk-btn rsk-btn-secondary" id="dropdown-btn" aria-expanded="false" aria-haspopup="true">Dropdown</button>
+          <ul class="rsk-dropdown-menu" role="menu">
+            <li><a class="rsk-dropdown-item" href="#">Action</a></li>
+            <li><a class="rsk-dropdown-item" href="#">Another action</a></li>
+            <li><hr class="rsk-dropdown-divider"></li>
+            <li><button type="button" class="rsk-dropdown-item">Something else</button></li>
+          </ul>
+        </div>
+        <div class="rsk-tooltip">
+          <button type="button" class="rsk-btn rsk-btn-outline-primary">Hover for tooltip</button>
+          <span class="rsk-tooltip-content" role="tooltip">Tooltip text – RSK World</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb & Pagination -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Breadcrumb & Pagination</h2>
+      <nav aria-label="Breadcrumb" class="rsk-mb-3">
+        <ol class="rsk-breadcrumb">
+          <li class="rsk-breadcrumb-item"><a href="index.html">Home</a><span class="rsk-breadcrumb-separator" aria-hidden="true">/</span></li>
+          <li class="rsk-breadcrumb-item"><a href="components.html">Components</a><span class="rsk-breadcrumb-separator" aria-hidden="true">/</span></li>
+          <li class="rsk-breadcrumb-item" aria-current="page">Advanced</li>
+        </ol>
+      </nav>
+      <nav aria-label="Pagination">
+        <ul class="rsk-pagination">
+          <li class="rsk-pagination-item"><a class="rsk-pagination-link" href="#" aria-label="Previous">←</a></li>
+          <li class="rsk-pagination-item"><a class="rsk-pagination-link" href="#">1</a></li>
+          <li class="rsk-pagination-item"><a class="rsk-pagination-link" href="#" aria-current="page">2</a></li>
+          <li class="rsk-pagination-item"><a class="rsk-pagination-link" href="#">3</a></li>
+          <li class="rsk-pagination-item"><a class="rsk-pagination-link" href="#" aria-label="Next">→</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Accordion -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Accordion</h2>
+      <div class="rsk-accordion-item">
+        <button type="button" class="rsk-accordion-trigger" aria-expanded="false" aria-controls="acc-1" id="acc-trigger-1">Section one</button>
+        <div id="acc-1" class="rsk-accordion-panel" aria-hidden="true" aria-labelledby="acc-trigger-1">Content for section one. Responsive Design System by RSK World.</div>
+      </div>
+      <div class="rsk-accordion-item">
+        <button type="button" class="rsk-accordion-trigger" aria-expanded="false" aria-controls="acc-2" id="acc-trigger-2">Section two</button>
+        <div id="acc-2" class="rsk-accordion-panel" aria-hidden="true" aria-labelledby="acc-trigger-2">Content for section two. help@rskworld.in</div>
+      </div>
+    </section>
+
+    <!-- Animations & Skeleton -->
+    <section class="rsk-mb-4">
+      <h2 class="rsk-text-2xl rsk-font-semibold rsk-mb-3">Animations & Skeleton</h2>
+      <div class="rsk-d-flex rsk-gap-4 rsk-flex-wrap rsk-mb-3">
+        <span class="rsk-badge rsk-badge-primary rsk-animate-pulse">Pulse</span>
+        <span class="rsk-badge rsk-badge-success rsk-animate-bounce">Bounce</span>
+        <span class="rsk-badge rsk-badge-info rsk-animate-fade-in">Fade in</span>
+      </div>
+      <div class="rsk-card" style="max-width: 20rem;">
+        <div class="rsk-card-body">
+          <div class="rsk-skeleton rsk-mb-2" style="height: 1rem; width: 60%;"></div>
+          <div class="rsk-skeleton rsk-mb-2" style="height: 1rem; width: 100%;"></div>
+          <div class="rsk-skeleton" style="height: 1rem; width: 80%;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="rsk-modal-backdrop" id="modal-backdrop" aria-hidden="true"></div>
+  <div class="rsk-modal" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="rsk-modal-header">
+      <h3 class="rsk-modal-title" id="modal-title">Modal title</h3>
+      <button type="button" class="rsk-modal-close" id="modal-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="rsk-modal-body">
+      Modal body. Responsive Design System © 2026 RSK World. Founder: Molla Samser. help@rskworld.in
+    </div>
+    <div class="rsk-modal-footer">
+      <button type="button" class="rsk-btn rsk-btn-secondary" id="modal-close-2">Close</button>
+      <button type="button" class="rsk-btn rsk-btn-primary">Save</button>
+    </div>
+  </div>
+
+  <footer class="rsk-container rsk-pt-4 rsk-pb-4 rsk-border" style="border-left: 0; border-right: 0; border-bottom: 0;">
+    <p class="rsk-text-center footer-credit rsk-m-0">
+      Components © 2026 <a href="https://rskworld.in">RSK World</a>. Molla Samser. help@rskworld.in | +91 93305 39277.
+    </p>
+  </footer>
+
+  <script>
+  /* Minimal JS for components - RSK World © 2026 */
+  (function() {
+    var doc = document;
+    function byId(id) { return doc.getElementById(id); }
+    function setTheme(theme) {
+      doc.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem('rsk-theme', theme); } catch (e) {}
+    }
+    try {
+      var saved = localStorage.getItem('rsk-theme');
+      if (saved) doc.documentElement.setAttribute('data-theme', saved);
+    } catch (e) {}
+
+    doc.querySelectorAll('[data-theme]').forEach(function(btn) {
+      if (btn.dataset.theme) btn.addEventListener('click', function() { setTheme(this.dataset.theme); });
+    });
+
+    var themeBtn = byId('theme-btn');
+    var themeDropdown = byId('theme-dropdown');
+    if (themeBtn && themeDropdown) {
+      themeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        themeDropdown.classList.toggle('is-open');
+        themeBtn.setAttribute('aria-expanded', themeDropdown.classList.contains('is-open'));
+      });
+      doc.addEventListener('click', function() {
+        themeDropdown.classList.remove('is-open');
+        themeBtn.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    var dropdownBtn = byId('dropdown-btn');
+    var demoDropdown = byId('demo-dropdown');
+    if (dropdownBtn && demoDropdown) {
+      dropdownBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        demoDropdown.classList.toggle('is-open');
+        dropdownBtn.setAttribute('aria-expanded', demoDropdown.classList.contains('is-open'));
+      });
+      doc.addEventListener('click', function() {
+        demoDropdown.classList.remove('is-open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    var tabs = doc.querySelectorAll('.rsk-tabs-trigger');
+    var panels = doc.querySelectorAll('.rsk-tabs-panel');
+    tabs.forEach(function(tab, i) {
+      tab.addEventListener('click', function() {
+        tabs.forEach(function(t, j) {
+          t.setAttribute('aria-selected', j === i);
+          t.setAttribute('tabindex', j === i ? 0 : -1);
+        });
+        panels.forEach(function(p, j) {
+          p.setAttribute('aria-hidden', j !== i);
+        });
+      });
+    });
+
+    var openModal = byId('open-modal');
+    var modal = byId('demo-modal');
+    var backdrop = byId('modal-backdrop');
+    var closeModal = function() {
+      if (modal) { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true'); }
+      if (backdrop) { backdrop.classList.remove('is-open'); backdrop.setAttribute('aria-hidden', 'true'); }
+    };
+    if (openModal && modal && backdrop) {
+      openModal.addEventListener('click', function() {
+        modal.classList.add('is-open'); modal.setAttribute('aria-hidden', 'false');
+        backdrop.classList.add('is-open'); backdrop.setAttribute('aria-hidden', 'false');
+      });
+      backdrop.addEventListener('click', closeModal);
+      byId('modal-close') && byId('modal-close').addEventListener('click', closeModal);
+      byId('modal-close-2') && byId('modal-close-2').addEventListener('click', closeModal);
+    }
+
+    var accTriggers = doc.querySelectorAll('.rsk-accordion-trigger');
+    accTriggers.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var panel = byId(this.getAttribute('aria-controls'));
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        if (panel) panel.setAttribute('aria-hidden', expanded);
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/*
+ * Scroll - Scroll-snap, scrollbar, scroll margin
+ * © 2026 RSK World | https://rskworld.in
+ * Founder: Molla Samser
+ * Email: help@rskworld.in | support@rskworld.in
+ * Phone: +91 93305 39277
+ * Address: Nutanhat, Mongolkote, Purba Burdwan, West Bengal, India, 713147
+ */
+
+/* Scroll-snap container - horizontal carousel */
+.rsk-scroll-snap-x {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: var(--rsk-space-4);
+  padding: var(--rsk-space-2) 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.rsk-scroll-snap-x > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+/* Scroll-snap - vertical full sections */
+.rsk-scroll-snap-y {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.rsk-scroll-snap-y > * {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+}
+
+/* Scroll margin - for fixed header anchor links */
+.rsk-scroll-margin-header {
+  scroll-margin-top: 5rem;
+}
+
+/* Custom scrollbar (WebKit + Firefox) */
+.rsk-scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rsk-color-gray-400) transparent;
+}
+
+.rsk-scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.rsk-scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rsk-scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--rsk-color-gray-400);
+  border-radius: var(--rsk-radius-full);
+}
+
+.rsk-scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--rsk-color-gray-500);
+}
+
+/* Hide scrollbar but keep scroll */
+.rsk-scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.rsk-scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scroll (prefer reduced motion respected in HTML) */
+@media (prefers-reduced-motion: no-preference) {
+  .rsk-scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
